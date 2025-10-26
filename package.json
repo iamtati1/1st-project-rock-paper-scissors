@@ -12,5 +12,13 @@
   "dependencies": {
     "prompt-sync": "^4.2.0",
     "sound-play": "^1.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamtati1/1st-project-rock-paper-scissors.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iamtati1/1st-project-rock-paper-scissors/issues"
+  },
+  "homepage": "https://github.com/iamtati1/1st-project-rock-paper-scissors#readme"
 }

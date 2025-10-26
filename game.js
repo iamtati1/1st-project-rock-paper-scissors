@@ -1,4 +1,4 @@
-// game.js
+// game.js Handles gameplay logic and data tracking.
 const prompt = require('prompt-sync')({ sigint: true });
 
 const gameData = {
@@ -15,7 +15,7 @@ const getComputerChoice = () => {
 };
 
 const playRound = () => {
-    const userChoice = prompt("Choose a move (rock, paper, or scissors): ").trim().toLowerCase();
+    const userChoice = prompt("Choose: (rock, paper, or scissors): ").trim().toLowerCase();
     if (!choices.includes(userChoice)) {
         console.log("❌ Invalid choice. Please type rock, paper, or scissors.");
         return;
@@ -79,13 +79,18 @@ const viewStats = () => {
     const totalGames = gameData.wins + gameData.losses + gameData.ties;
     const winRate = totalGames > 0 ? Math.round((gameData.wins / totalGames) * 100) : 0;
 
+    const stats = [
+        { label: "Games Won", value: gameData.wins },
+        { label: "Games Lost", value: gameData.losses },
+        { label: "Games Tied", value: gameData.ties },
+        { label: "Total Games", value: totalGames },
+        { label: "Win Rate", value: `${winRate}%` }
+    ];
+
     console.log("\n📊 Current Statistics:");
-    console.log(`Games Won: ${gameData.wins}`);
-    console.log(`Games Lost: ${gameData.losses}`);
-    console.log(`Games Tied: ${gameData.ties}`);
-    console.log(`Total Games: ${totalGames}`);
-    console.log(`Win Rate: ${winRate}%`);
+    stats.forEach(stat => console.log(`${stat.label}: ${stat.value}`));
 };
+
 const resetStats = () => {
     gameData.wins = 0;
     gameData.losses = 0;
