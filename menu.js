@@ -1,4 +1,5 @@
 // menu.js
+
 const prompt = require('prompt-sync')({ sigint: true });
 const { playRound, viewStats, resetStats, bestOfMode } = require('./game.js');
 

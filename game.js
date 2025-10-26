@@ -1,4 +1,5 @@
 // game.js Handles gameplay logic and data tracking.
+
 const prompt = require('prompt-sync')({ sigint: true });
 
 const gameData = {
@@ -87,7 +88,7 @@ const viewStats = () => {
         { label: "Win Rate", value: `${winRate}%` }
     ];
 
-    console.log("\n📊 Current Statistics:");
+    console.log("\n📊 Current Statistics:"); // \n is like enter
     stats.forEach(stat => console.log(`${stat.label}: ${stat.value}`));
 };
 
