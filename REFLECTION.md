@@ -1,6 +1,5 @@
 # Reflection
 
-
 Making this game was definitely a challenge, but also a rewarding experience. The easiest part for me was creating the menu items since I had an example from class (our task manager project) that had a similar structure. I used that as a guide and built out the menu options I wanted for my ***Rock, Paper, Scissors*** game.
 
 
